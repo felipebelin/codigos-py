@@ -14,22 +14,27 @@ page_icon="👋",
  
 )
 st.header("Dados do Projeto")
+
 arquivo = "https://raw.githubusercontent.com/felipebelin/codigos-py/main/projetos-1.csv"
  
 df = pd.read_csv(arquivo, sep=';')
  
 st.dataframe(df.head(23))
+
 st.write("Gráfico de linha dos indicadores ao longo do tempo")
+
 fig, ax = plt.subplots()
  
 df.plot(ax=ax)
  
 st.pyplot(fig)
+
 fig, ax = plt.subplots()
  
 df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', ax=ax)
  
 st.pyplot(fig)
+
 fig, ax = plt.subplots()
  
 df["Projeto1"].plot(kind = 'hist', ax=ax)
@@ -37,7 +42,9 @@ df["Projeto1"].plot(kind = 'hist', ax=ax)
 df["Projeto4"].plot(kind = 'hist', ax=ax)
  
 st.pyplot(fig)
+
 st.header("Ipea Selic")
+
 dados = ip.list_series('Selic')
  
 dados
