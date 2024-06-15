@@ -2,7 +2,7 @@ import streamlit as st
 
 import pandas as pd  
 
-arquivo = "projetos.csv" 
+arquivo = "https://raw.githubusercontent.com/felipebelin/codigos-py/main/projetos-1.csv" 
 df = pd.read_csv(arquivo, sep=';') 
 df.head(23)
 df1 = pd.DataFrame({'mes': [12], 'ano': [2023], 'Projeto1': [29376], 'Projeto2': [40392], 'Projeto3': [63648], 'Projeto4': [29376], 'Projeto5': [25704] })
