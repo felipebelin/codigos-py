@@ -1,5 +1,3 @@
-import streamlit as st
-
 import pandas as pd  
 
 arquivo = "https://raw.githubusercontent.com/felipebelin/codigos-py/main/projetos-1.csv" 
@@ -21,6 +19,8 @@ ip.list_series('Selic')
 selic = ip.timeseries('BM12_TJOVER12', yearGreaterThan=2021, yearSmallerThan=2024)
 selic
 ip.timeseries('BM12_TJOVER12', year=2021).plot("MONTH", "VALUE ((% a.m.))")
+ip.timeseries('BM12_TJOVER12', year=2022).plot("MONTH", "VALUE ((% a.m.))")
+plt.show()
 ip.timeseries('BM12_TJOVER12', year=2022).plot("MONTH", "VALUE ((% a.m.))")
 plt.show()
 
